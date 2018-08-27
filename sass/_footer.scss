@@ -1,0 +1,156 @@
+.footer {
+    height: 60vh;
+    background-color: $color-white;
+    padding-top: 10rem;
+
+    @media(max-width:1200px){
+        padding-left: 5rem;
+    }
+
+    @media(max-width:900px){
+        padding-left: 2rem;
+    }
+
+
+    &__container {
+        max-width: 140rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        @media(max-width:1400px){
+            max-width: 110rem;
+        }
+
+        @media(max-width:1200px){
+            max-width: 90rem;
+        }
+
+        @media(max-width:900px){
+            max-width: 80rem;
+        }
+
+        &--nav {
+            display: flex;
+
+            @media(max-width:1200px){
+                margin-left: 5rem;
+                margin-right: 0;
+            }
+
+
+
+            &-content {
+                width: 25rem;
+
+                @media(max-width:1200px){
+                    width: 15rem;
+                    margin-right: 2rem;
+                }
+            }
+        }
+        
+    }
+
+
+    &__link,
+    &__link:link,
+    &__link:visited {
+        color: $color-grey-medium;
+        text-decoration: none;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-weight: 500;
+        transition: all .3s;
+        position: relative;
+
+
+        @media(max-width:1200px){
+            font-size: 1.1rem;
+        }
+
+        @media(max-width:900px){
+            font-size: 1rem;
+        }
+
+    }
+
+    &__link::after {
+        content: '';
+        width: 60%;
+        height: 100%;
+        position: absolute;
+        top: 3px;
+        left: 0;
+        border-bottom: 2px solid $color-primary;
+        transform: translateY(10px) scale(0);
+        opacity: 0;
+        transition: all ease .3s;
+
+    }
+
+    &__link:hover,
+    &__link:hover::after {
+        opacity: 1;
+        transform: translateY(3px) scale(1);
+        color: $color-primary;
+
+    }
+
+
+    &__items {
+        list-style: none;
+        line-height: 3rem;
+        margin-top: 1rem;
+    }
+
+
+
+
+    &__info {
+        margin-right: 10rem;
+
+        @media(max-width:900px){
+            display: none;
+        }
+
+
+
+        &--content {
+            margin-bottom: 5rem;
+
+            .heading-4 {
+                margin-bottom: 1rem;
+            }
+
+            .paragraph {
+                text-transform: uppercase;
+            }
+
+
+            a {
+                color: $color-white-p;
+                cursor: pointer;
+                margin-right: 1rem;
+                transition: all .2s;
+            }
+            a:hover {
+                color:$color-grey-dark;
+            }
+        }
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+}

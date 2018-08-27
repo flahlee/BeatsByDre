@@ -1,0 +1,87 @@
+.btn,
+.btn-red {
+    position: relative;
+
+    &,
+    &:link,
+    &:visited{
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1.2rem 3rem;
+        display: inline-block;
+        border-radius: 100px;
+        background-color: transparent;
+        border: 2px solid $color-white-p;
+        box-sizing: content-box;
+        color: $color-white;
+        font-size: 1.4rem;
+        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        cursor: pointer;
+        overflow: hidden;
+        transition: all .3s;
+        z-index: 1;
+
+        @media(max-width: 600px){
+            padding: .7rem 2rem;
+        }
+        
+    }
+
+    &:link::before {
+        content: '';
+        position: absolute;
+        top: 50px;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        border-radius: 100px;
+        transition: all .2s;
+        overflow: hidden;
+        z-index: -1;
+    }
+
+    &:link:hover::before {
+        top: 0;
+        background-color: $color-white-p;
+        color: #000;
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
+}
+
+
+
+.btn-red {
+
+    &,
+    &:link,
+    &:visited{
+        background-color: $color-primary;
+        border: none;
+        color: $color-white;
+        padding: 1.4rem 3rem;
+
+        @media(max-width: 600px){
+            padding: .7rem 2rem;
+        }
+    }
+
+    &:hover {
+        background-color: rgba($color-white-p, .5);
+        border: none;
+        color: $color-grey-dark;
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
+
+}
+
+.fab {
+    font-size: 2rem;
+    margin-left: 2px;
+    outline: none;
+}
